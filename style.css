@@ -20,22 +20,21 @@
     var(--Bright_Cyan)
   );
 }
-body{
+body {
   overflow-x: hidden;
 }
 
 header {
   background-color: var(--White);
   display: flex;
-  justify-content: space-between;
   align-items: center;
   position: absolute;
   width: 100%;
   z-index: 1;
 }
-.log,
+.logo,
 .hamburger {
-  padding: 1rem;
+  padding: 1rem 0 1rem 0;
 }
 
 header nav,
@@ -54,11 +53,13 @@ main img {
 .showcase {
   text-align: center;
   font-weight: bold;
+  padding-bottom: 2rem;
 }
 .showcase h1,
 .showcase p {
   margin: 5% 10% 0 10%;
   width: 85%;
+  font-weight: 500;
 }
 
 .showcase p {
@@ -76,16 +77,20 @@ button {
   margin: 10%;
   width: auto;
   border: none;
-  padding: 1rem 3rem 1rem 3rem;
+  padding: 0.8rem 2rem 0.8rem 2rem;
   border-radius: 30rem;
   color: var(--White);
-  font-weight: 400;
+  font-weight: 600;
+  font-size: 0.9rem;
   background: var(--liner_gradient);
   cursor: pointer;
 }
-
+/* .showcase button{
+  background: aqua;
+  color: black;
+} */
 button:hover {
-  opacity: 70%;
+  --liner_gradient: linear-gradient(to right,  hsl(136, 72%, 78%), hsl(192, 73%, 74%));
 }
 
 .whyChoose {
@@ -106,20 +111,20 @@ section h2 {
 }
 section h4 {
   padding: 1.7rem 0 1.7rem 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--Dark_Blue);
 }
 section img {
-  padding: 1.7rem 0 1.7rem 0;
+  padding-top: 1.7rem;
 }
 
 section p {
   width: 90%;
   margin: 0 5% 0 5%;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: var(--Grayish_Blue);
-  font-weight: 400;
-  line-height: 1.5rem;
+  font-weight: 500;
+  line-height: 1.4rem;
 }
 section {
   padding-bottom: 3rem;
@@ -143,12 +148,15 @@ article .container {
   background-color: var(--White);
   width: 85%;
   margin: auto;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 0;
 }
 article img {
   width: 100%;
   border-top-right-radius: 0.3rem;
   border-top-left-radius: 0.3rem;
-  margin: 1rem 0 0.4rem 0;
+  margin: 0rem 0 0.4rem 0;
 }
 
 article .by {
@@ -156,6 +164,9 @@ article .by {
   margin: 1rem 0 1em 0;
   color: var(--Grayish_Blue);
   font-weight: bold;
+}
+article .des {
+  padding-left: 1.5rem;
 }
 
 article h5 {
@@ -170,7 +181,7 @@ article h5:hover {
 }
 
 article p {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   margin: 1rem 0 1em 0;
   color: var(--Grayish_Blue);
   font-weight: 400;
@@ -196,6 +207,10 @@ footer .icon img {
 footer li a {
   text-decoration: none;
   color: var(--White);
+  font-size: 0.8rem;
+}
+footer button {
+  padding: 0.7rem 1.8rem 0.7rem 1.8rem;
 }
 footer li {
   padding: 0.5rem;
@@ -204,7 +219,7 @@ footer li {
 footer p {
   color: var(--Grayish_Blue);
   font-size: 0.8rem;
-  padding: 1rem 0 3rem 0;
+  padding-bottom: 2rem;
 }
 
 footer li a:hover {
@@ -216,6 +231,7 @@ header nav ul {
   display: flex;
   list-style: none;
   gap: 2rem;
+  padding: 1.5rem 0 1.5rem 0;
 }
 header li a {
   text-decoration: none;
@@ -225,7 +241,7 @@ header li a {
 }
 header button {
   margin: 0;
-  padding: 0.5rem 1.2rem;
+  padding: 0.7rem 1.7rem;
 }
 header {
   justify-content: space-around;
@@ -235,7 +251,7 @@ header li a:hover {
   color: var(--Dark_Blue);
   border-bottom: 5px solid;
   border-image-slice: 1;
-  border-image-source: var(--liner_gradient)
+  border-image-source: var(--liner_gradient);
 }
 
 /* mediaquery */
@@ -251,31 +267,34 @@ header li a:hover {
 
   main {
     display: flex;
-  }
-  main{
-    background: url("./images/bg-intro-desktop.svg") no-repeat 35em -11em; 
-    /* background-color: aqua; */
+    background-color: var(--Very_Light_Gray);
     position: relative;
-    z-index: -2;
-    /* /* background-size: cover; */
+    z-index: -1;
+  
+    /* overflow-x: clip; */
   }
+  main {
+    /* background: url("./images/bg-intro-desktop.svg") no-repeat left;  */
+    margin-right: -7%;
+  }
+
   main .mainImage {
     background: none;
-    /* background: url("./images/bg-intro-desktop.svg") no-repeat -10rem 0; */
+    background: url("./images/bg-intro-desktop.svg") no-repeat -4rem -10rem;
     /* background-color: aqua; */
     /* background-size: cover; */
-    margin-right: -7%;
-    width: 50%;
-    z-index: 1;
-    
+    /* margin-top: ; */
+
+    width: 53%;
+    z-index: -1;
+    padding-bottom: 6rem;
   }
   main img {
-    position: absolute;
-    margin-top: 0%;
-    /* margin-right: -20%; */
-    /* overflow: hidden; */
-    width: 50%;
-    z-index: -1;
+    /* margin-right: -17%; */
+    width: 90%;
+    margin-top: -7%;
+    margin-bottom: -30%;
+    margin-left: 12%;
   }
   .showcase {
     /* margin-top: 0%; */
@@ -283,18 +302,19 @@ header li a:hover {
     /* background-color: aquamarine; */
     order: -1;
     margin: auto;
+    margin-left: 4%;
     margin-top: 13%;
-    margin-bottom: 12%;
     text-align: start;
   }
   .showcase h1 {
-    font-size: 2.5rem;
-    font-weight: 50;
-    font-family: "Public Sans", sans-serif;
-    /* padding-right: 5rem;
-    border: 1px solid red; */
+    font-size: 3em;
+    /* font-weight: 500; */
+    /* background-color: antiquewhite; */
   }
-  section{
+  .showcase p {
+    font-size: 1rem;
+  }
+  section {
     position: relative;
     z-index: -3;
   }
@@ -307,21 +327,31 @@ header li a:hover {
     margin-left: 7.5%;
   }
   section h2 {
+    font-size: 2.4rem;
     width: 100%;
     margin-left: 0;
     margin-right: 0;
     padding-bottom: 1rem;
     text-align: start;
-    font-weight: 100;
   }
   section p {
     margin-left: 0;
+    width: 75%;
+    font-size: 1rem;
+  }
+section .box h4{
+  font-size: 1.4rem;
+}
+  section .box p{
+    font-size: 0.9rem;
+    font-weight: 500;
   }
 
   .biggerbox {
     display: flex;
     width: 85%;
     margin: auto;
+    flex-wrap: wrap;
   }
   .box {
     width: 25%;
@@ -332,8 +362,10 @@ header li a:hover {
     font-size: 0.8rem;
   }
   article h2 {
+    font-size: 2.4rem;
     text-align: start;
     margin-left: 7.5%;
+    margin-bottom: 1rem;
   }
   article .box {
     width: 23%;
@@ -341,9 +373,9 @@ header li a:hover {
   article img {
     height: 8rem;
   }
-  article .des {
-    /* margin-left: 5%; */
-  }
+  /* article .des {
+    width: 90%;
+  } */
   .des .by {
     font-size: 0.5rem;
   }
@@ -355,6 +387,7 @@ header li a:hover {
   }
   footer {
     display: flex;
+    padding-bottom: 2rem;
     /* align-items: flex-start; */
   }
   footer .leftfooter {
@@ -389,9 +422,15 @@ header li a:hover {
     /* background-color: aqua; */
     text-align: end;
   }
+  footer li a {
+    color: var(--Grayish_Blue);
+    font-size: 0.9;
+    font-weight: 800;
+  }
 
   .rightfooter button {
     margin: 0 0 1rem 0;
     padding: 0.7rem 1.7rem 0.7rem 1.7rem;
   }
 }
+

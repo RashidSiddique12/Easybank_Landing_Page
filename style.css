@@ -3,6 +3,7 @@
   padding: 0;
   font-family: "Public Sans", sans-serif;
   font-size: 18px;
+  font-weight: 400;
 }
 :root {
   --Dark_Blue: hsl(233, 26%, 24%);
@@ -12,23 +13,38 @@
   --Light_Grayish_Blue: hsl(220, 16%, 96%);
   --Very_Light_Gray: hsl(0, 0%, 98%);
   --White: hsl(0, 0%, 100%);
+
+  --liner_gradient: linear-gradient(
+    to right,
+    var(--Lime_Green),
+    var(--Bright_Cyan)
+  );
+}
+body{
+  overflow-x: hidden;
 }
 
 header {
   background-color: var(--White);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: absolute;
   width: 100%;
   z-index: 1;
 }
-.log, .hamburger{
-    padding: 1rem;
+.log,
+.hamburger {
+  padding: 1rem;
 }
 
+header nav,
+header button {
+  display: none;
+}
 main .mainImage {
   background: url("./images/bg-intro-mobile.svg") no-repeat;
-  width: 100%;
+  /* width: 100%; */
   background-size: cover;
 }
 main img {
@@ -64,7 +80,12 @@ button {
   border-radius: 30rem;
   color: var(--White);
   font-weight: 400;
-  background: linear-gradient(to right, var(--Lime_Green), var(--Bright_Cyan));
+  background: var(--liner_gradient);
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 70%;
 }
 
 .whyChoose {
@@ -114,8 +135,14 @@ article h2 {
   color: var(--Dark_Blue);
 }
 article {
-  margin: auto;
+  width: 100%;
+  background-color: var(--Very_Light_Gray);
+  /* background-color: aqua */
+}
+article .container {
+  background-color: var(--White);
   width: 85%;
+  margin: auto;
 }
 article img {
   width: 100%;
@@ -137,6 +164,10 @@ article h5 {
   /* font-weight: bold; */
   font-size: 1rem;
 }
+article h5:hover {
+  color: var(--Lime_Green);
+  cursor: pointer;
+}
 
 article p {
   font-size: 0.8rem;
@@ -155,7 +186,7 @@ footer {
 
 footer .bottomLogo img {
   padding: 2rem 0 1rem 0;
-  color: white;
+  /* color: white; */
 }
 
 footer .icon img {
@@ -171,7 +202,196 @@ footer li {
 }
 
 footer p {
-  color: var(--Dark_Blue);
+  color: var(--Grayish_Blue);
   font-size: 0.8rem;
   padding: 1rem 0 3rem 0;
+}
+
+footer li a:hover {
+  color: var(--Lime_Green);
+}
+/* //// for destop mode */
+header nav ul {
+  /* background-color: aqua; */
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+header li a {
+  text-decoration: none;
+  color: var(--Grayish_Blue);
+  padding-bottom: 0.7rem;
+  /* font-weight: 400; */
+}
+header button {
+  margin: 0;
+  padding: 0.5rem 1.2rem;
+}
+header {
+  justify-content: space-around;
+}
+
+header li a:hover {
+  color: var(--Dark_Blue);
+  border-bottom: 5px solid;
+  border-image-slice: 1;
+  border-image-source: var(--liner_gradient)
+}
+
+/* mediaquery */
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+  header nav,
+  header button {
+    display: block;
+  }
+
+  main {
+    display: flex;
+  }
+  main{
+    background: url("./images/bg-intro-desktop.svg") no-repeat 35em -11em; 
+    /* background-color: aqua; */
+    position: relative;
+    z-index: -2;
+    /* /* background-size: cover; */
+  }
+  main .mainImage {
+    background: none;
+    /* background: url("./images/bg-intro-desktop.svg") no-repeat -10rem 0; */
+    /* background-color: aqua; */
+    /* background-size: cover; */
+    margin-right: -7%;
+    width: 50%;
+    z-index: 1;
+    
+  }
+  main img {
+    position: absolute;
+    margin-top: 0%;
+    /* margin-right: -20%; */
+    /* overflow: hidden; */
+    width: 50%;
+    z-index: -1;
+  }
+  .showcase {
+    /* margin-top: 0%; */
+    width: 40%;
+    /* background-color: aquamarine; */
+    order: -1;
+    margin: auto;
+    margin-top: 13%;
+    margin-bottom: 12%;
+    text-align: start;
+  }
+  .showcase h1 {
+    font-size: 2.5rem;
+    font-weight: 50;
+    font-family: "Public Sans", sans-serif;
+    /* padding-right: 5rem;
+    border: 1px solid red; */
+  }
+  section{
+    position: relative;
+    z-index: -3;
+  }
+
+  section .chosetitle {
+    /* background-color: aquamarine; */
+    width: 60%;
+    text-align: start;
+    padding: 4rem 0 2rem 0;
+    margin-left: 7.5%;
+  }
+  section h2 {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 1rem;
+    text-align: start;
+    font-weight: 100;
+  }
+  section p {
+    margin-left: 0;
+  }
+
+  .biggerbox {
+    display: flex;
+    width: 85%;
+    margin: auto;
+  }
+  .box {
+    width: 25%;
+    text-align: left;
+    /* margin: auto; */
+  }
+  .box p {
+    font-size: 0.8rem;
+  }
+  article h2 {
+    text-align: start;
+    margin-left: 7.5%;
+  }
+  article .box {
+    width: 23%;
+  }
+  article img {
+    height: 8rem;
+  }
+  article .des {
+    /* margin-left: 5%; */
+  }
+  .des .by {
+    font-size: 0.5rem;
+  }
+  article .currency {
+    margin-left: 0;
+  }
+  article .confetti {
+    margin-right: 0;
+  }
+  footer {
+    display: flex;
+    /* align-items: flex-start; */
+  }
+  footer .leftfooter {
+    width: 60%;
+    display: flex;
+    gap: 8rem;
+    text-align: start;
+  }
+  footer .bottomLogo img {
+    /* background-color: aqua; */
+    padding: 1rem 0 2rem 0;
+  }
+  .icon img {
+    color: aqua;
+  }
+  footer ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
+  footer li {
+    list-style: none;
+    text-align: start;
+  }
+  footer > div {
+    padding: 2% 7.5% 0 7.5%;
+    /* margin-left: 7.5%; */
+  }
+  footer .rightfooter {
+    width: 30%;
+    padding-top: 3%;
+    /* background-color: aqua; */
+    text-align: end;
+  }
+
+  .rightfooter button {
+    margin: 0 0 1rem 0;
+    padding: 0.7rem 1.7rem 0.7rem 1.7rem;
+  }
 }

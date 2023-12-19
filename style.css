@@ -85,13 +85,11 @@ button {
   background: var(--liner_gradient);
   cursor: pointer;
 }
-/* .showcase button{
-  background: aqua;
-  color: black;
-} */
+
 button:hover {
-  --liner_gradient: linear-gradient(to right,  hsl(136, 72%, 78%), hsl(192, 73%, 74%));
+  background: linear-gradient(to right,  hsl(136, 72%, 78%), hsl(192, 73%, 74%));
 }
+
 
 .whyChoose {
   background-color: var(--Light_Grayish_Blue);
@@ -193,6 +191,7 @@ footer {
   background-color: var(--Dark_Blue);
   /* background-color: aqua; */
   margin-top: 5rem;
+  padding-bottom: 3rem;
 }
 
 footer .bottomLogo img {
@@ -200,13 +199,13 @@ footer .bottomLogo img {
   /* color: white; */
 }
 
-footer .icon img {
-  margin: 0.5rem;
+footer .icon svg {
+  margin-bottom: 1rem;
 }
 
 footer li a {
   text-decoration: none;
-  color: var(--White);
+  color: var(--Light_Grayish_Blue);
   font-size: 0.8rem;
 }
 footer button {
@@ -219,12 +218,16 @@ footer li {
 footer p {
   color: var(--Grayish_Blue);
   font-size: 0.8rem;
-  padding-bottom: 2rem;
 }
 
 footer li a:hover {
   color: var(--Lime_Green);
 }
+
+.logo-hover:hover{
+  fill:var(--Lime_Green);
+}
+
 /* //// for destop mode */
 header nav ul {
   /* background-color: aqua; */
@@ -253,6 +256,7 @@ header li a:hover {
   border-image-slice: 1;
   border-image-source: var(--liner_gradient);
 }
+
 
 /* mediaquery */
 
@@ -339,7 +343,7 @@ header li a:hover {
     width: 75%;
     font-size: 1rem;
   }
-section .box h4{
+  section .box h4{
   font-size: 1.4rem;
 }
   section .box p{
@@ -352,11 +356,15 @@ section .box h4{
     width: 85%;
     margin: auto;
     flex-wrap: wrap;
+    
   }
   .box {
-    width: 25%;
+    width: 250px;
+    height: 370px;
     text-align: left;
-    /* margin: auto; */
+    margin: auto;
+    margin-left: 0;
+
   }
   .box p {
     font-size: 0.8rem;
@@ -368,40 +376,29 @@ section .box h4{
     margin-bottom: 1rem;
   }
   article .box {
-    width: 23%;
+    width: 250px;
+    margin-left: 0;
   }
   article img {
     height: 8rem;
   }
-  /* article .des {
-    width: 90%;
-  } */
   .des .by {
     font-size: 0.5rem;
   }
-  article .currency {
-    margin-left: 0;
-  }
-  article .confetti {
-    margin-right: 0;
-  }
+ 
   footer {
     display: flex;
     padding-bottom: 2rem;
-    /* align-items: flex-start; */
   }
   footer .leftfooter {
-    width: 60%;
+    width: 50%;
     display: flex;
     gap: 8rem;
     text-align: start;
+    padding: 2% 7.5% 0 7.5%;
   }
   footer .bottomLogo img {
-    /* background-color: aqua; */
     padding: 1rem 0 2rem 0;
-  }
-  .icon img {
-    color: aqua;
   }
   footer ul {
     columns: 2;
@@ -412,10 +409,7 @@ section .box h4{
     list-style: none;
     text-align: start;
   }
-  footer > div {
-    padding: 2% 7.5% 0 7.5%;
-    /* margin-left: 7.5%; */
-  }
+  
   footer .rightfooter {
     width: 30%;
     padding-top: 3%;
@@ -433,4 +427,5 @@ section .box h4{
     padding: 0.7rem 1.7rem 0.7rem 1.7rem;
   }
 }
+
 

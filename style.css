@@ -43,7 +43,6 @@ header button {
 }
 main .mainImage {
   background: url("./images/bg-intro-mobile.svg") no-repeat;
-  /* width: 100%; */
   background-size: cover;
 }
 main img {
@@ -68,7 +67,6 @@ main img {
   color: var(--Grayish_Blue);
 }
 .showcase h1 {
-  /* color: var(--Grayish_Blue); */
   color: var(--Dark_Blue);
   font-size: 2em;
 }
@@ -93,12 +91,10 @@ button:hover {
 
 .whyChoose {
   background-color: var(--Light_Grayish_Blue);
-  /* background-color:aquamarine; */
   text-align: center;
 }
 
 section h2 {
-  /* background-color: aqua; */
   width: 60%;
   margin-left: 20%;
   margin-right: 20%;
@@ -140,7 +136,6 @@ article h2 {
 article {
   width: 100%;
   background-color: var(--Very_Light_Gray);
-  /* background-color: aqua */
 }
 article .container {
   background-color: var(--White);
@@ -170,7 +165,6 @@ article .des {
 article h5 {
   margin: 1rem 0 1em 0;
   color: var(--Dark_Blue);
-  /* font-weight: bold; */
   font-size: 1rem;
 }
 article h5:hover {
@@ -189,14 +183,12 @@ article p {
 footer {
   text-align: center;
   background-color: var(--Dark_Blue);
-  /* background-color: aqua; */
   margin-top: 5rem;
   padding-bottom: 3rem;
 }
 
 footer .bottomLogo img {
   padding: 2rem 0 1rem 0;
-  /* color: white; */
 }
 
 footer .icon svg {
@@ -272,25 +264,22 @@ header li a:hover {
   main {
     display: flex;
     background-color: var(--Very_Light_Gray);
-    position: relative;
-    z-index: -1;
+    overflow-x: hidden;
   
-    /* overflow-x: clip; */
+    overflow-x: clip;
   }
-  main {
-    /* background: url("./images/bg-intro-desktop.svg") no-repeat left;  */
-    margin-right: -7%;
-  }
+ 
 
   main .mainImage {
     background: none;
-    background: url("./images/bg-intro-desktop.svg") no-repeat -4rem -10rem;
+    background: url("./images/bg-intro-desktop.svg") no-repeat -1rem -10rem;
     /* background-color: aqua; */
     /* background-size: cover; */
     /* margin-top: ; */
+    /* overflow-x: hidden; */
+    
 
     width: 53%;
-    z-index: -1;
     padding-bottom: 6rem;
   }
   main img {
@@ -298,33 +287,30 @@ header li a:hover {
     width: 90%;
     margin-top: -7%;
     margin-bottom: -30%;
-    margin-left: 12%;
+    margin-left: 23%;
+    /* position: relative; */    
+    /* height: 40rem; */
+    /* margin-right: -50rem; */
+    /* background-color: aqua; */
   }
+
   .showcase {
-    /* margin-top: 0%; */
+    /* background-color: aqua; */
     width: 40%;
-    /* background-color: aquamarine; */
+    /* height: 25vw; */
     order: -1;
     margin: auto;
     margin-left: 4%;
     margin-top: 13%;
     text-align: start;
   }
-  .showcase h1 {
-    font-size: 3em;
-    /* font-weight: 500; */
-    /* background-color: antiquewhite; */
-  }
-  .showcase p {
-    font-size: 1rem;
-  }
+ 
   section {
     position: relative;
     z-index: -3;
   }
 
   section .chosetitle {
-    /* background-color: aquamarine; */
     width: 60%;
     text-align: start;
     padding: 4rem 0 2rem 0;
@@ -359,7 +345,7 @@ header li a:hover {
     
   }
   .box {
-    width: 250px;
+    width: 300px;
     height: 370px;
     text-align: left;
     margin: auto;
@@ -413,7 +399,6 @@ header li a:hover {
   footer .rightfooter {
     width: 30%;
     padding-top: 3%;
-    /* background-color: aqua; */
     text-align: end;
   }
   footer li a {
@@ -429,3 +414,11 @@ header li a:hover {
 }
 
 
+@media (min-width:1300px){
+  .showcase h1 {
+    font-size: 3em;
+  }
+  .showcase p {
+    font-size: 1rem;
+  }
+}

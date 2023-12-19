@@ -159,7 +159,8 @@ article .by {
   font-weight: bold;
 }
 article .des {
-  padding-left: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 article h5 {
@@ -264,8 +265,7 @@ header li a:hover {
   main {
     display: flex;
     background-color: var(--Very_Light_Gray);
-    overflow-x: hidden;
-  
+    /* overflow-x: hidden; */
     overflow-x: clip;
   }
  
@@ -300,21 +300,21 @@ header li a:hover {
     /* height: 25vw; */
     order: -1;
     margin: auto;
-    margin-left: 4%;
+    margin-left: 7%;
     margin-top: 13%;
     text-align: start;
   }
  
   section {
     position: relative;
-    z-index: -3;
+    z-index: -1;
   }
 
   section .chosetitle {
     width: 60%;
     text-align: start;
     padding: 4rem 0 2rem 0;
-    margin-left: 7.5%;
+    margin-left: 11%;
   }
   section h2 {
     font-size: 2.4rem;
@@ -326,14 +326,14 @@ header li a:hover {
   }
   section p {
     margin-left: 0;
-    width: 75%;
     font-size: 1rem;
+    /* background-color: rgb(44, 81, 81); */
   }
   section .box h4{
   font-size: 1.4rem;
 }
   section .box p{
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 500;
   }
 
@@ -342,13 +342,15 @@ header li a:hover {
     width: 85%;
     margin: auto;
     flex-wrap: wrap;
+    margin-left: 11%;
+    
     
   }
   .box {
-    width: 300px;
-    height: 370px;
+    width: 270px;
+    height: 350px;
     text-align: left;
-    margin: auto;
+    margin: 1rem;
     margin-left: 0;
 
   }
@@ -358,15 +360,16 @@ header li a:hover {
   article h2 {
     font-size: 2.4rem;
     text-align: start;
-    margin-left: 7.5%;
+    margin-left: 11%;
     margin-bottom: 1rem;
   }
   article .box {
     width: 270px;
-    margin-left: 0;
+    margin:0 2% 8% 0;
+  
   }
   article img {
-    height: 8rem;
+    height: 10rem;
   }
   .des .by {
     font-size: 0.5rem;
